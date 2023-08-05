@@ -20,3 +20,10 @@ function getCurrentDayAndTime() {
   
   console.log(getCurrentDayAndTime());
 
+// * 2. Write a JavaScript program to print the current window contents.  
+
+function printCurrentWindowContents() {
+    window.print();
+  }
+  
+ console.log(printCurrentWindowContents());
