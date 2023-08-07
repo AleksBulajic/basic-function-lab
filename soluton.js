@@ -32,6 +32,12 @@ function printCurrentWindowContents() {
 // Expected Output :
 // mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
 
-function currentDate() {
-    
-}
+const date = new Date();
+const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+
+const formattedDateDash = date.toLocaleString('en-US', options).replace(/\//g, '-');
+console.log(formattedDateDash); // Output: "08-07-2023"
+
+const formattedDateSlash = date.toLocaleString('en-US', options);
+console.log(formattedDateSlash); // Output: "08/07/2023"
+
