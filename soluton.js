@@ -41,7 +41,7 @@ console.log(formattedDateDash); // Output: "08-07-2023"
 const formattedDateSlash = date.toLocaleString('en-US', options);
 console.log(formattedDateSlash); // Output: "08/07/2023"
 
-// * 1. Write a JavaScript function that reverses a number.
+// * 4. Write a JavaScript function that reverses a number.
 // Example x = 32243;
 // Expected Output : 34223
 
@@ -54,3 +54,26 @@ function reversesNumber(number) {
 }
 
 console.log(reversesNumber(x));
+
+//  * 2. Write a JavaScript function that checks whether a passed string is a palindrome or not?
+// A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
+
+function isPalindrome(str) {
+ const strReversed = str.split("").reverse().join("");
+  if(str === strReversed) {
+    return true
+  }else {
+    return false
+  }
+
+}
+
+console.log(isPalindrome('madam'), true);
+console.log(isPalindrome('nurses run'), true);
+console.log(isPalindrome('fox'), false);
+
+//? difference between doube equal and triple equal//////////////////////////////////////
+const double = 1 == "1"
+const triple = 1 === "1"
+
+console.log(`This is double equal: ${double} \n This is Triple equal:  ${triple}`);
