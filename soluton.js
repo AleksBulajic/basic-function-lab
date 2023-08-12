@@ -41,3 +41,16 @@ console.log(formattedDateDash); // Output: "08-07-2023"
 const formattedDateSlash = date.toLocaleString('en-US', options);
 console.log(formattedDateSlash); // Output: "08/07/2023"
 
+// * 1. Write a JavaScript function that reverses a number.
+// Example x = 32243;
+// Expected Output : 34223
+
+
+const x = 12345
+
+function reversesNumber(number) {
+    const n = number.toString().split("").reverse().join("");
+    return n
+}
+
+console.log(reversesNumber(x));
