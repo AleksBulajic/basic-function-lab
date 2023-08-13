@@ -36,10 +36,10 @@ const date = new Date();
 const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
 
 const formattedDateDash = date.toLocaleString('en-US', options).replace(/\//g, '-');
-console.log(formattedDateDash); // Output: "08-07-2023"
+console.log(formattedDateDash); 
 
 const formattedDateSlash = date.toLocaleString('en-US', options);
-console.log(formattedDateSlash); // Output: "08/07/2023"
+console.log(formattedDateSlash);
 
 // * 4. Write a JavaScript function that reverses a number.
 // Example x = 32243;
@@ -54,6 +54,7 @@ function reversesNumber(number) {
 }
 
 console.log(reversesNumber(x));
+
 
 //  * 2. Write a JavaScript function that checks whether a passed string is a palindrome or not?
 // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
