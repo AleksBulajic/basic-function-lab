@@ -78,3 +78,21 @@ const double = 1 == "1"
 const triple = 1 === "1"
 
 console.log(`This is double equal: ${double} \n This is Triple equal:  ${triple}`);
+
+
+// *  Write a JavaScript function that generates all combinations of a string.
+// Example string : 'dog'
+// Expected Output : d,do,dog
+
+function generates(str) {
+  const combinations = []
+
+  for (let i = 0; i < str.length; i++){
+    for(let j = i + 1; j <= str.length; j++){
+      combinations.push(str.slice(i, j))
+    }
+   return combinations
+  }
+}
+
+console.log(generates('dog'));
