@@ -117,3 +117,13 @@ function alfabeticalOrder(string) {
 console.log(alfabeticalOrder("restaurant"));
 console.log(alfabeticalOrder("hello there"));
 console.log(alfabeticalOrder("can i have 3 beers"));
+
+
+// * 5. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case.
+// Example string : 'the quick brown fox'
+// Expected Output : 'The Quick Brown Fox '
+
+function toUpperCase(string) {
+
+  
+}
