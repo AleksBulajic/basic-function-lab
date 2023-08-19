@@ -169,6 +169,13 @@ console.log(countVowels("The quick brown fox"))
 // * 8. Write a JavaScript function that accepts a number as a parameter and checks whether it is prime or not.
 // Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 
+function primeNumber(num){
+  let prime = 0
+
+  
+
+}
+
 // * 9. Write a JavaScript function that accepts an argument and returns the type.
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
 
