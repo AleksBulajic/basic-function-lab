@@ -154,6 +154,18 @@ console.log(longestWord("Web Development Tutorial"));
 // Example string : 'The quick brown fox'
 // Expected Output : 5
 
+function countVowels(str) {
+  const vowels = "aeiou";
+  let count = 0;
+  for (let char of str.toLowerCase()) {
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countVowels("The quick brown fox"))
+
 // * 8. Write a JavaScript function that accepts a number as a parameter and checks whether it is prime or not.
 // Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 
