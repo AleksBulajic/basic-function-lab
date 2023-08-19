@@ -118,20 +118,18 @@ console.log(alfabeticalOrder("restaurant"));
 console.log(alfabeticalOrder("hello there"));
 console.log(alfabeticalOrder("can i have 3 beers"));
 
-
 // * 5. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case.
 // Example string : 'the quick brown fox'
 // Expected Output : 'The Quick Brown Fox '
 
-function uppercase(str)
-{
-  let array1 = str.split(' ');
+function uppercase(str) {
+  let array1 = str.split(" ");
   let newarray1 = [];
-    
-  for(let x = 0; x < array1.length; x++){
-      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+
+  for (let x = 0; x < array1.length; x++) {
+    newarray1.push(array1[x].charAt(0).toUpperCase() + array1[x].slice(1));
   }
-  return newarray1.join(' ');
+  return newarray1.join(" ");
 }
 console.log(uppercase("the quick brown fox"));
 
@@ -139,12 +137,22 @@ console.log(uppercase("the quick brown fox"));
 // Example string : 'Web Development Tutorial'
 // Expected Output : 'Development'
 
+function longestWord(str) {
+  let words = str.split(" ");
+  let longest = "";
+  for (let word of words) {
+    if (word.length > longest.length) {
+      longest = word;
+    }
+  }
+  return longest;
+}
+console.log(longestWord("Web Development Tutorial"));
 
 // * 7. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
 // Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.
 // Example string : 'The quick brown fox'
 // Expected Output : 5
-
 
 // * 8. Write a JavaScript function that accepts a number as a parameter and checks whether it is prime or not.
 // Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
@@ -152,14 +160,11 @@ console.log(uppercase("the quick brown fox"));
 // * 9. Write a JavaScript function that accepts an argument and returns the type.
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
 
-
 //*  10. Write a JavaScript function which returns the n rows by n columns identity matrix.
-
 
 // * 11. Write a JavaScript function that takes an array of numbers and finds the second lowest and second greatest numbers, respectively.
 // Sample array : [1,2,3,4,5]
 // Expected Output : 2,4
-
 
 // * 12. Write a JavaScript function that checks whether a number is perfect.
 // According to Wikipedia : In number theory, a perfect number is a positive integer that is equal to the sum of its proper positive divisors, that is, the sum of its positive divisors excluding the number itself (also known as its aliquot sum). Equivalently, a perfect number is a number that is half the sum of all of its positive divisors (including itself).
