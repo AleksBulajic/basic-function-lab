@@ -215,8 +215,8 @@ function stringCap(str) {
   return newStr;
 }
 console.log(stringCap("hello there"));
-/*
 
+/*  14
 write a function that takes a string as a argument
 
 the string is suppoesd to be HTML, but all the div elements are missing their closing tags (they have the < and > )
