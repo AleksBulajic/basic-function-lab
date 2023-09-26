@@ -176,13 +176,13 @@ function primeNumber(num) {
 // * 9. Write a JavaScript function that accepts an argument and returns the type.
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
 
-function typeOf(arguments){
-    return typeof arguments
+function typeOf(arguments) {
+  return typeof arguments;
 }
 console.log(typeOf("hello"));
 console.log(typeOf(9));
 console.log(typeOf(true));
-console.log(typeOf(function(){}));
+console.log(typeOf(function () {}));
 console.log(typeOf({}));
 console.log(typeOf(undefined));
 
@@ -202,8 +202,19 @@ starting the capitalization at index 0
 the function should then return the converted String 
 */
 
-function stringCap(str) {}
-
+function stringCap(str) {
+  let newStr = "";
+  for(let i = 0; i < str.length; i++) {
+    if(i % 2 === 0) {
+      newStr += str[i].toUpperCase();
+    }else{
+      newStr += str[i].toLowerCase();
+    }
+    
+  }
+  return newStr;
+}
+console.log(stringCap("hello there"));
 /*
 
 write a function that takes a string as a argument
