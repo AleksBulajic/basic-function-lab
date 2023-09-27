@@ -225,9 +225,26 @@ console.log(generateIdentityMatrix(4));
 // According to Wikipedia : In number theory, a perfect number is a positive integer that is equal to the sum of its proper positive divisors, that is, the sum of its positive divisors excluding the number itself (also known as its aliquot sum). Equivalently, a perfect number is a number that is half the sum of all of its positive divisors (including itself).
 // Example : The first perfect number is 6, because 1, 2, and 3 are its proper positive divisors, and 1 + 2 + 3 = 6. Equivalently, the number 6 is equal to half the sum of all its positive divisors: ( 1 + 2 + 3 + 6 ) / 2 = 6. The next perfect number is 28 = 1 + 2 + 4 + 7 + 14. This is followed by the perfect numbers 496 and 8128.
 
+function prefectNumber(number) {
+  let sum = 0;
+  for (let i = 0; (i = number); i++) {
+    if (number % i === 0) {
+      sum += i;
+    }
+  }
+
+  if (sum === number) {
+    return true;
+  } else {
+    return false;
+  }
+ 
+}
+console.log(prefectNumber(6));
+
 /*  * 13. Write a function that accepts a String as and argument
 the function should Capitalize ONLY every other letter in the String
-starting the capitalization at index 0
+startingfalse the capitalization at index 0
 the function should then return the converted String 
 */
 
