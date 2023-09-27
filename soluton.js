@@ -238,9 +238,12 @@ function prefectNumber(number) {
   } else {
     return false;
   }
- 
 }
 console.log(prefectNumber(6));
+console.log(prefectNumber(28));
+console.log(prefectNumber(496));
+console.log(prefectNumber(8128));
+console.log(prefectNumber(2));
 
 /*  * 13. Write a function that accepts a String as and argument
 the function should Capitalize ONLY every other letter in the String
