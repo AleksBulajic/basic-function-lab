@@ -188,6 +188,35 @@ console.log(typeOf(undefined));
 
 //*  10. Write a JavaScript function which returns the n rows by n columns identity matrix.
 
+// Function to generate an n by n identity matrix
+function generateIdentityMatrix(n) {
+  // Initialize an empty array to store the identity matrix
+  let identityMatrix = [];
+  // Loop through rows (i varies from 0 to n-1)
+  for (let i = 0; i < n; i++) {
+    // Initialize an empty array for the current row
+    let row = [];
+    // Loop through columns (j varies from 0 to n-1)
+    for (let j = 0; j < n; j++) {
+      // Check if the current row index is equal to the current column index
+      if (i === j) {
+        // If they are equal, push 1 to the row (main diagonal element)
+        row.push(1);
+      } else {
+        // If they are not equal, push 0 to the row (off-diagonal element)
+        row.push(0);
+      }
+    }
+    // Push the completed row to the identityMatrix
+    identityMatrix.push(row);
+  }
+  // Return the resulting identity matrix
+  return identityMatrix;
+}
+
+console.log(generatesIdentityMatrix(3));
+console.log(generatesIdentityMatrix(4));
+
 // * 11. Write a JavaScript function that takes an array of numbers and finds the second lowest and second greatest numbers, respectively.
 // Sample array : [1,2,3,4,5]
 // Expected Output : 2,4
@@ -204,13 +233,12 @@ the function should then return the converted String
 
 function stringCap(str) {
   let newStr = "";
-  for(let i = 0; i < str.length; i++) {
-    if(i % 2 === 0) {
+  for (let i = 0; i < str.length; i++) {
+    if (i % 2 === 0) {
       newStr += str[i].toUpperCase();
-    }else{
+    } else {
       newStr += str[i].toLowerCase();
     }
-    
   }
   return newStr;
 }
