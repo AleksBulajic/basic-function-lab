@@ -275,3 +275,15 @@ the functions job is to find and close all the divs in the provided HTML String
 the function should return the fixed HTML String
 
  */
+
+//1. Write a JavaScript function that reverses a number.
+// Example x = 32243;
+// Expected Output : 34223
+
+function reverseNum(numbersss){
+const newNumbersss = numbersss.toString().split("").reverse().join("");
+  return newNumbersss
+
+}
+
+console.log(reverseNum(34566))
