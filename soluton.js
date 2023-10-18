@@ -245,7 +245,6 @@ function isPerfectNumber(number) {
 
 console.log(isPerfectNumber(6));
 
-
 /*  * 13. Write a function that accepts a String as and argument
 the function should Capitalize ONLY every other letter in the String
 startingfalse the capitalization at index 0
@@ -280,10 +279,35 @@ the function should return the fixed HTML String
 // Example x = 32243;
 // Expected Output : 34223
 
-function reverseNum(numbersss){
-const newNumbersss = numbersss.toString().split("").reverse().join("");
-  return newNumbersss
-
+function reverseNum(numbersss) {
+  const newNumbersss = numbersss.toString().split("").reverse().join("");
+  return newNumbersss;
 }
 
-console.log(reverseNum(34566))
+console.log(reverseNum(34566));
+
+/* 
+Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). The next words should be always capitalized.
+
+Examples
+"the-stealth-warrior" gets converted to "theStealthWarrior"
+
+"The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+"The_Stealth-Warrior" gets converted to "TheStealthWarrior"
+
+*/
+
+function toCamelCase(str) {
+  let newStr = str.split("");
+
+  for (let i = 0; i < newStr.length; i++) {
+    if (newStr[i] === "-" || newStr[i] === "_") {
+      newStr.splice(i, 1);
+      newStr[i] = newStr[i].toUpperCase();
+    }
+  }
+  return newStr.join("");
+}
+
+console.log(toCamelCase("the-stealth-warrior"));
