@@ -171,7 +171,17 @@ console.log(countVowels("The quick brown fox"));
 
 function primeNumber(num) {
   let prime = 0;
+    
+  
+
 }
+
+console.log(primeNumber(2), true)
+console.log(primeNumber(4), false)
+console.log(primeNumber(3), true)
+console.log(primeNumber(5), true)
+console.log(primeNumber(6), false)
+console.log(primeNumber(7), true)
 
 // * 9. Write a JavaScript function that accepts an argument and returns the type.
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
@@ -351,3 +361,29 @@ function createPhoneNumber(numbers){
 
 console.log(createPhoneNumber([2,3,4,5,6,7,8,9,0,1]))
 console.log(createPhoneNumber([1,2,3,4,5,6,7,8,9,0]))
+
+
+//The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+//What if the string is empty? Then the result should be empty object literal, {}
+
+
+function count(string) {
+  let dictionary = {}
+  string = string.split("")
+  
+  for( let i = 0; i < string.length; i++){
+     if (dictionary.hasOwnProperty(string[i])){
+         dictionary[string[i]] += 1;
+ } else {
+ 
+   dictionary[string[i]] = 1;
+     }
+  }
+   return dictionary;
+ }
+
+ console.log(count("abacd"))
+ console.log(count("abcdee"))
+ console.log(count("gggh"))
+ console.log(count(""))
