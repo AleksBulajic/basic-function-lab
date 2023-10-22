@@ -284,6 +284,7 @@ the functions job is to find and close all the divs in the provided HTML String
 the function should return the fixed HTML String
 
  */
+//TODO need to finish the problem above!!
 
 //1. Write a JavaScript function that reverses a number.
 // Example x = 32243;
