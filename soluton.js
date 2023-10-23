@@ -171,17 +171,14 @@ console.log(countVowels("The quick brown fox"));
 
 function primeNumber(num) {
   let prime = 0;
-    
-  
-
 }
 
-console.log(primeNumber(2), true)
-console.log(primeNumber(4), false)
-console.log(primeNumber(3), true)
-console.log(primeNumber(5), true)
-console.log(primeNumber(6), false)
-console.log(primeNumber(7), true)
+console.log(primeNumber(2), true);
+console.log(primeNumber(4), false);
+console.log(primeNumber(3), true);
+console.log(primeNumber(5), true);
+console.log(primeNumber(6), false);
+console.log(primeNumber(7), true);
 
 // * 9. Write a JavaScript function that accepts an argument and returns the type.
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
@@ -284,9 +281,7 @@ the functions job is to find and close all the divs in the provided HTML String
 the function should return the fixed HTML String
 
  */
-function closingTag(string){
-  
-}
+function closingTag(string) {}
 
 //1. Write a JavaScript function that reverses a number.
 // Example x = 32243;
@@ -342,51 +337,87 @@ function friend(friends) {
 console.log(friend(["Ryan", "Kieran", "Mark"])); // ["Ryan", "Mark"]
 console.log(friend(["Alek", "Bob", "Ivan", "Jozo", "Marko", "Luka"]));
 
-
 //Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number. ex. (345) 564-5678
 
-function createPhoneNumber(numbers){
-  let phoneNumber = ""
-  
-  for(let i = 0; i < numbers.length; i++){
-    if(i === 0 ){
-      phoneNumber += "("
+function createPhoneNumber(numbers) {
+  let phoneNumber = "";
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (i === 0) {
+      phoneNumber += "(";
     }
-    phoneNumber += numbers[i]
-    if( i === 2 ){
-      phoneNumber += ") "
-    }else if(i === 5 ){
-      phoneNumber += "-"
+    phoneNumber += numbers[i];
+    if (i === 2) {
+      phoneNumber += ") ";
+    } else if (i === 5) {
+      phoneNumber += "-";
     }
   }
- return phoneNumber
+  return phoneNumber;
 }
 
-console.log(createPhoneNumber([2,3,4,5,6,7,8,9,0,1]))
-console.log(createPhoneNumber([1,2,3,4,5,6,7,8,9,0]))
-
+console.log(createPhoneNumber([2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 
 //The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
 
 //What if the string is empty? Then the result should be empty object literal, {}
 
-
 function count(string) {
-  let dictionary = {}
-  string = string.split("")
-  
-  for( let i = 0; i < string.length; i++){
-     if (dictionary.hasOwnProperty(string[i])){
-         dictionary[string[i]] += 1;
- } else {
- 
-   dictionary[string[i]] = 1;
-     }
-  }
-   return dictionary;
- }
+  let dictionary = {};
+  string = string.split("");
 
- console.log(count("abacd"))
- console.log(count("abcdee"))
- console.log(count("gggh"))
- console.log(count(""))
+  for (let i = 0; i < string.length; i++) {
+    if (dictionary.hasOwnProperty(string[i])) {
+      dictionary[string[i]] += 1;
+    } else {
+      dictionary[string[i]] = 1;
+    }
+  }
+  return dictionary;
+}
+
+console.log(count("abacd"));
+console.log(count("abcdee"));
+console.log(count("gggh"));
+console.log(count(""));
+
+
+//  Your job is to write a function which increments a string, to create a new string.
+
+// If the string already ends with a number, the number should be incremented by 1.
+// If the string does not end with a number. the number 1 should be appended to the new string.
+
+function incrementingString(string) {
+  // started a variable that give the result 
+  let result = "";
+  //started a variable that stashes letters
+  let letters = "";
+  //started a variable that stashes numbers
+  let numbers = "";
+// splut the string into an array
+  let stringArray = string.split("");
+//running trhu the array to check whats a letter and whats a number 
+  for (let i = 0; i < stringArray.length; i++) {
+    if (isNaN(stringArray[i])) {
+      letters += stringArray[i];
+    } else {
+      numbers += stringArray[i];
+    }
+  }
+//if there are no numbers add 1 to the end of the string
+  if (numbers === "") {
+    numbers += "1";
+  } else {
+// if there is a number 
+    let incrementedNumber = (parseInt(numbers) + 1).toString().padStart(numbers.length, '0');
+    numbers = incrementedNumber;
+  }
+  result = letters + numbers;
+  return result;
+}
+
+// Test cases
+console.log(incrementingString("foo"), "outcome: foo1");
+console.log(incrementingString("foo2"), "outcome: foo3");
+console.log(incrementingString("abc001"), "outcome: abc002");
