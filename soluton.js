@@ -421,3 +421,4 @@ function incrementingString(string) {
 console.log(incrementingString("foo"), "outcome: foo1");
 console.log(incrementingString("foo2"), "outcome: foo3");
 console.log(incrementingString("abc001"), "outcome: abc002");
+console.log(incrementingString("abc009"), "outcome: abc010")
